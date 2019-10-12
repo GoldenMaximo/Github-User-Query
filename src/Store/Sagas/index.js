@@ -15,6 +15,6 @@ export default function* rootSaga() {
     // takeEvery permite executar todas as requisições que o usuarios ativou
     // primiero parametro é o nome do type do action que queremos ouvir
     // vai disparar a função getUser
-        takeLatest(getUserTypes.GET_REQUEST, getUserAPI),
+        takeLatest(getUserTypes.REQUEST, getUserAPI),
     ]);
 }
