@@ -1,14 +1,18 @@
 import React from 'react';
-import Footer from './Components/Footer';
-import Home from './Pages/Home';
+import { Provider } from 'react-redux';
+import Store from './Store';
+import Routes from './Routes';
 
 function App() {
-  return (
-    <div className="App">
-        <Home />
-        <Footer />
-    </div>
-  );
+    return (
+    // <div className="App">
+    //     <Home />
+    //     <Footer />
+    // </div>
+        <Provider store={Store}>
+            <Routes />
+        </Provider>
+    );
 }
 
 export default App;
