@@ -8,31 +8,31 @@
 
 1. Clone it or fork it.
 
-2. Once you have your local copy, install its dependencies:
+2. Once you have your local copy, install its dependencies using either Yarn:
 
-```sh
-npm install
 ```
-    
-   *or*
-    
-```sh
 yarn
+```
+
+or npm:
+
+```
+npm install
 ```
 
 
 ## Running
 
-After installed, you can start the application by running:
+After installed, you can start the application by running it with Yarn:
 
-```sh
-npm start
+```
+yarn start
 ```
 
-   *or*
+or npm:
 
-```sh
-yarn start
+```
+npm run start
 ```
 
 *This will start the server at `localhost:3000` (if you didn't change the `PORT` property on `.env`)*
