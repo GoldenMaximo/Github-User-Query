@@ -3,6 +3,18 @@
     height: 96vh;
 }
 
+.form {
+    max-width: 750px;
+}
+
 .search-bar-container {
     width: 60%;
+}
+
+.pl-2 {
+    padding-left: 2%
+}
+
+.pl-8 {
+    padding-left: 8%
 }

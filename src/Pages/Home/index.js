@@ -22,7 +22,7 @@ const Home = () => {
 
     if (Object.entries(userData).length || error) {
         return (
-            <Redirect to={`/${userData.id}`} />
+            <Redirect to={`/${userData.login}`} />
         );
     }
 
@@ -43,6 +43,7 @@ const Home = () => {
                 onChangeText={onChangeTextHandler}
                 onSubmit={submitHandler}
                 loading={loading}
+                inputWidth="32.6vw"
             />
         </div>
     );

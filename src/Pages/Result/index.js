@@ -33,7 +33,15 @@ const Result = () => {
 
     return (
         <div className="Result">
-            <div className="d-flex row align-items-center justify-content-space-evenly">
+            {/* <div className="d-flex row">
+                <div className="d-flex col pl-2">
+                    <SearchHeading />
+                    </div>
+                    <div className="d-flex col pl-8 justify-content-center">
+                    <SearchBar inputWidth="100%" />
+                    </div>
+                </div> */}
+            <div className="d-flex row flex-wrap align-items-center justify-content-space-evenly">
                 <div>
                     <SearchHeading />
                 </div>
@@ -41,8 +49,23 @@ const Result = () => {
                     <SearchBar inputWidth="100%" />
                 </div>
             </div>
-            <div className="row">
-                <p>teste</p>
+            {/* <div className="row">
+                <div className="d-flex col">
+                    <img src={userData.avatar_url} alt="Avatar" />
+                </div>
+                <div className="d-flex col">
+                    <p>teste</p>
+                </div>
+            </div> */}
+            <div className="d-flex row flex-wrap align-items-center justify-content-space-evenly">
+                <div>
+                    <img src={userData.avatar_url} alt="Avatar" />
+                </div>
+                <div className="search-bar-container">
+                    {/* {userData.map((number) =>
+                        <li>{number}</li>
+                    )} */}
+                </div>
             </div>
         </div>
     );

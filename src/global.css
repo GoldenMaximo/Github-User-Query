@@ -33,8 +33,16 @@ code {
     display: flex;
 }
 
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
 .row {
     flex-direction: row;
+}
+
+.col {
+    flex-direction: column;
 }
 
 .justify-content-center {
