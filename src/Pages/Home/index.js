@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Redirect } from 'react-router-dom';
 
 // vou usar useSelector pra pega o loading e fazer conditional rendering no icon do button
 import { useSelector, useDispatch } from 'react-redux';
@@ -17,9 +18,13 @@ const Home = () => {
 
     const loading = useSelector(state => state.getUser.loading);
     const userData = useSelector(state => state.getUser.data);
-    console.log(loading);
-    console.log(userData);
+    const error = useSelector(state => state.getUser.error);
 
+    if (Object.entries(userData).length || error) {
+        return (
+            <Redirect to={`/${userData.id}`} />
+        );
+    }
 
     const submitHandler = event => {
         event.preventDefault();
@@ -37,6 +42,7 @@ const Home = () => {
                 value={username}
                 onChangeText={onChangeTextHandler}
                 onSubmit={submitHandler}
+                loading={loading}
             />
         </div>
     );

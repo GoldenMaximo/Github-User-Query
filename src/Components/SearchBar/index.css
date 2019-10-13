@@ -9,7 +9,7 @@ form:hover {
 
 .Search-Input {
     border: 0px;
-    width: 625px;
+    min-width: 625px;
     height: 50px;
     padding-left: 25px;
     background-color: #ffffff;

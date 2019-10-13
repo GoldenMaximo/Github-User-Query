@@ -13,6 +13,7 @@ You can search a user by it's name and then see his/hers repos on a list.
 * [React.js](https://reactjs.org/) - JS Framework used
 * [Create React App](https://create-react-app.dev/) - React bootstrapper
 * [GitHub API](https://developer.github.com/v3/) - Used to query the information
+* [Puff loading spinner](http://samherbert.net/svg-loaders/) - The loading spinner used
 
 ## Inspirations and resources
 

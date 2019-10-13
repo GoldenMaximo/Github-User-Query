@@ -8,7 +8,7 @@ const INITIAL_STATE = {
     username: null,
     loading: false,
     error: false,
-    data: [],
+    data: {},
 };
 
 export default function getUser(state = INITIAL_STATE, action) {
@@ -29,7 +29,7 @@ export default function getUser(state = INITIAL_STATE, action) {
     case Types.FAILURE:
         return {
             ...state,
-            data: [],
+            data: {},
             error: true,
             loading: false,
         };
