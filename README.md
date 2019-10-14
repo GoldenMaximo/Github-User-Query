@@ -12,6 +12,12 @@ You can search a user by it's name and then see his/hers repos on a list.
 
 * [React.js](https://reactjs.org/) - JS Framework used
 * [Create React App](https://create-react-app.dev/) - React bootstrapper
+* [Redux](https://redux.js.org/) - State container
+* [React-Redux](https://github.com/reduxjs/react-redux) - React bindings for Redux
+* [Redux-Saga](https://github.com/redux-saga/redux-saga) - Redux middleware
+* [Redux Ducks Pattern](https://github.com/erikras/ducks-modular-redux) - Modular Redux Reducer Pattern/Bundle
+* [React-Router-DOM](https://www.npmjs.com/package/react-router-dom) - DOM bindings for React Router
+* [axios](https://github.com/axios/axios) - HTTP client
 * [GitHub API](https://developer.github.com/v3/) - Used to query the information
 * [Puff loading spinner](http://samherbert.net/svg-loaders/) - The loading spinner used
 
@@ -20,6 +26,7 @@ You can search a user by it's name and then see his/hers repos on a list.
 * [Zeplin.io](https://zpl.io/VxYQp7g) - Overall design
 * [Monaco font](https://www.cufonfonts.com/font/monaco) - Used for the GitHub header
 * [Raleway font](https://www.cufonfonts.com/font/raleway-5) - Used throughout the app
+* [Concrete favicon](https://concrete.com.br) - Page icon
 
 ## Installation
 
