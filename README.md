@@ -19,7 +19,6 @@ You can search a user by it's name and then see his/hers repos on a list.
 * [React-Router-DOM](https://www.npmjs.com/package/react-router-dom) - DOM bindings for React Router
 * [axios](https://github.com/axios/axios) - HTTP client
 * [GitHub API](https://developer.github.com/v3/) - Used to query the information
-* [Puff loading spinner](http://samherbert.net/svg-loaders/) - The loading spinner used
 
 ## Inspirations and resources
 
@@ -27,6 +26,7 @@ You can search a user by it's name and then see his/hers repos on a list.
 * [Monaco font](https://www.cufonfonts.com/font/monaco) - Used for the GitHub header
 * [Raleway font](https://www.cufonfonts.com/font/raleway-5) - Used throughout the app
 * [Concrete favicon](https://concrete.com.br) - Page icon
+* [Puff loading spinner](http://samherbert.net/svg-loaders/) - The loading spinner used
 
 ## Installation
 
@@ -71,3 +71,7 @@ Gustavo Máximo – gfmaximo97@gmail.com
 
 I'm not currently accepting pull requests as this is a personal challange for both training and career aspiration purposes.
 Feel free to fork it however.
+
+## License
+
+This repository is licensed under [MIT](https://opensource.org/licenses/MIT)
