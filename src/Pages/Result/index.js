@@ -19,7 +19,6 @@ import OrganizationIcon from '../../Assets/Icons/Organization Icon.png';
 const Result = props => {
     const error = useSelector(state => state.getUserData.error);
     const userData = useSelector(state => state.getUserData.userData);
-    // const username = useSelector(state => state.getUserData.username);
     const userRepos = useSelector(state => state.getUserRepos.userRepos);
 
     const dispatch = useDispatch();
@@ -27,10 +26,6 @@ const Result = props => {
     if (!Object.entries(userData).length && !error) {
         dispatch(getUserData.get(props.match.params.userLogin));
     }
-
-    // if (error) {
-    //     props.history.push(`/${username}`);
-    // }
 
     useEffect(() => {
         if (userData.login) {
