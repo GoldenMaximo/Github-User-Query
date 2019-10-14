@@ -26,7 +26,7 @@ const SearchBar = props => {
         if (error) {
             props.history.push(`/${userlogin}`);
         }
-    }, [userData]);
+    }, [userData, error, props.history, userlogin]);
 
     const submitHandler = event => {
         event.preventDefault();

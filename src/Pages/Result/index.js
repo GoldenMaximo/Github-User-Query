@@ -31,13 +31,13 @@ const Result = props => {
         if (userData.login) {
             dispatch(getUserRepos.get(userData.login));
         }
-    }, [userData]);
+    }, [userData, dispatch]);
 
     return (
         <div className="Result w-96vh-700">
             <div className="d-flex row flex-wrap align-items-center justify-content-space-evenly">
                 <div>
-                    <SearchHeading />
+                    <SearchHeading className="cursor-pointer-on-hover" href="/" />
                 </div>
                 <div className="w-60">
                     <SearchBar inputWidth="100%" />
@@ -46,7 +46,9 @@ const Result = props => {
             {Object.entries(userData).length ? (
                 <div className="pt-3 d-flex row flex-wrap align-items-center justify-content-space-evenly">
                     <div className="col flex-wrap align-self-baseline pl-3-1366">
-                        <img src={userData.avatar_url} alt="Avatar" className="d-flex user-picture" />
+                        <a target="_blank" rel="noopener noreferrer" href={userData.html_url}>
+                            <img src={userData.avatar_url} alt="Avatar" className="d-flex user-picture" />
+                        </a>
                         <span className="user-name d-flex pt-3">{userData.name}</span>
                         <Details className="pt-3" height="25px">{userData.login}</Details>
                         <div className="pt-5">
@@ -82,7 +84,9 @@ const Result = props => {
                                 userRepos.map(repo => (
                                     <div key={repo.id} className="d-flex row pb-2 pb-10-700">
                                         <div className="d-flex col">
-                                            <span className="repo-name d-flex flex-one pb-10-700">{repo.name}</span>
+                                            <a target="_blank" rel="noopener noreferrer" href={repo.html_url}>
+                                                <span className="repo-name d-flex flex-one pb-10-700">{repo.name}</span>
+                                            </a>
                                             <span className="repo-description d-contents flex-one pt-1">{repo.description}</span>
                                             <Details className="pt-1">
                                                 <img src={StarIcon} className="pr-3" alt="Stargazes icon" />

@@ -110,6 +110,10 @@ code {
     padding-left: 8%;
 }
 
+.cursor-pointer-on-hover:hover {
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 700px) {
     .pt-10-700 {
         padding-top: 10%;
