@@ -3,7 +3,7 @@ import { Redirect } from 'react-router-dom';
 
 // vou usar useSelector pra pega o loading e fazer conditional rendering no icon do button
 import { useSelector, useDispatch } from 'react-redux';
-import { Creators as getUser } from '../../Store/Ducks/getUser';
+import { Creators as getUserData } from '../../Store/Ducks/getUserData';
 
 
 import SearchHeading from '../../Components/SearchHeading';
@@ -15,10 +15,9 @@ const Home = () => {
     const dispatch = useDispatch();
     const [username, setUsername] = useState('');
 
-
-    const loading = useSelector(state => state.getUser.loading);
-    const userData = useSelector(state => state.getUser.data);
-    const error = useSelector(state => state.getUser.error);
+    const error = useSelector(state => state.getUserData.error);
+    const loading = useSelector(state => state.getUserData.loading);
+    const userData = useSelector(state => state.getUserData.userData);
 
     if (Object.entries(userData).length || error) {
         return (
@@ -28,7 +27,7 @@ const Home = () => {
 
     const submitHandler = event => {
         event.preventDefault();
-        dispatch(getUser.get(username));
+        dispatch(getUserData.get(username));
     };
 
     const onChangeTextHandler = event => {

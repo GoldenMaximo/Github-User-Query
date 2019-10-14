@@ -1,20 +1,75 @@
 .Result {
-    width: 100vw;
-    height: 96vh;
+    width: 99vw;
+    padding-bottom: 60px;
 }
 
 .form {
     max-width: 750px;
 }
 
-.search-bar-container {
-    width: 60%;
+.user-name {
+    width: 280px;
+    height: 40px;
+    font-family: Raleway;
+    font-size: 35px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
 }
 
-.pl-2 {
-    padding-left: 2%
+.user-picture {
+    width: 21vw;
+    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.4);
 }
 
-.pl-8 {
-    padding-left: 8%
+@media only screen and (max-width: 1366px) {
+    .user-picture {
+        width: 25vw !important;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .user-picture {
+        width: 55vw !important;
+    }
+}
+
+.user-details {
+    height: 22px;
+    color: #5c5c5c;
+    width: 280px;
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+.repo-name {
+    height: 40.8px;
+    font-family: Raleway;
+    font-size: 35px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ac53f2;
+}
+
+.repo-description {
+    height: 25.5px;
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
 }

@@ -1,9 +1,11 @@
 // all é para lidar com varios sagas
-import { all, takeLatest } from 'redux-saga/effects';
+import { all, takeEvery } from 'redux-saga/effects';
 
-import { getUserAPI } from './getUser';
+import { getUserData } from './getUserData';
+import { getUserRepos } from './getUserRepos';
 
-import { Types as getUserTypes } from '../Ducks/getUser';
+import { Types as getUserDataTypes } from '../Ducks/getUserData';
+import { Types as getUserReposTypes } from '../Ducks/getUserRepos';
 
 // * é uma função generator do js
 // generator: maneira de lidar com requisições assincronas é parecido com async await, mas é mais poderoso
@@ -15,6 +17,7 @@ export default function* rootSaga() {
     // takeEvery permite executar todas as requisições que o usuarios ativou
     // primiero parametro é o nome do type do action que queremos ouvir
     // vai disparar a função getUser
-        takeLatest(getUserTypes.REQUEST, getUserAPI),
+        takeEvery(getUserDataTypes.USERDATAREQUEST, getUserData),
+        takeEvery(getUserReposTypes.USERREPOSREQUEST, getUserRepos),
     ]);
 }
