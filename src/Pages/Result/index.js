@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useMemo, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
@@ -33,6 +33,8 @@ const Result = props => {
         }
     }, [userData, dispatch]);
 
+    const starCount = useMemo(() => userRepos.reduce((a, b) => a + b.stargazers_count, 0), [userRepos]);
+
     return (
         <div className="Result w-96vh-700">
             <div className="d-flex row flex-wrap align-items-center justify-content-space-evenly">
@@ -62,6 +64,12 @@ const Result = props => {
                                 <div className="d-flex align-items-center pt-3">
                                     <img src={LocationIcon} alt="Location icon" />
                                     <Details className="pl-2">{userData.location}</Details>
+                                </div>
+                            ) : null}
+                            {starCount ? (
+                                <div className="d-flex align-items-center pt-3">
+                                    <img src={StarIcon} alt="Stargazes icon" />
+                                    <Details className="pl-2">{starCount}</Details>
                                 </div>
                             ) : null}
                             {userData.public_repos ? (
