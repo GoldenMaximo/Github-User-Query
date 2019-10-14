@@ -118,4 +118,14 @@ code {
     .pb-10-700 {
         padding-bottom: 10%;
     }
+
+    .w-96vh-700 {
+      width: 96vw;
+    }
+}
+
+@media only screen and (max-width: 1366px) {
+  .pl-3-1366 {
+      padding-left: 3%;
+  }
 }

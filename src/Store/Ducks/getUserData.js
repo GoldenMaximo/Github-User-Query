@@ -6,7 +6,7 @@ export const Types = {
 };
 
 const INITIAL_STATE = {
-    userData: {},
+    userData: [],
     username: null,
     loading: false,
     error: false,
@@ -56,9 +56,5 @@ export const Creators = {
 
     getFailure: () => ({
         type: Types.USERDATAFAILURE,
-    }),
-
-    default: () => ({
-        type: Types.USERDATADEFAULT,
     }),
 };

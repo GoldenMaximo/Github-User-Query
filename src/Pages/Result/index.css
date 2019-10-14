@@ -1,5 +1,5 @@
 .Result {
-    width: 99vw;
+    width: 98vw;
     padding-bottom: 60px;
 }
 
@@ -72,4 +72,8 @@
     line-height: normal;
     letter-spacing: normal;
     color: #000000;
+}
+
+.not-found-container {
+  height: 35vh;
 }

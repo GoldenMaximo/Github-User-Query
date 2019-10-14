@@ -14,13 +14,17 @@ const SearchBar = props => {
     const dispatch = useDispatch();
     const [username, setUsername] = useState('');
 
-    // const error = useSelector(state => state.getUserData.error);
+    const error = useSelector(state => state.getUserData.error);
     const loading = useSelector(state => state.getUserData.loading);
     const userData = useSelector(state => state.getUserData.userData);
+    const userlogin = useSelector(state => state.getUserData.username);
 
     useEffect(() => {
         if (Object.entries(userData).length) {
             props.history.push(`/${userData.login}`);
+        }
+        if (error) {
+            props.history.push(`/${userlogin}`);
         }
     }, [userData]);
 

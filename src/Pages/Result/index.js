@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 import { Creators as getUserData } from '../../Store/Ducks/getUserData';
 import { Creators as getUserRepos } from '../../Store/Ducks/getUserRepos';
@@ -16,14 +17,20 @@ import FollowersIcon from '../../Assets/Icons/Followers Icon.png';
 import OrganizationIcon from '../../Assets/Icons/Organization Icon.png';
 
 const Result = props => {
+    const error = useSelector(state => state.getUserData.error);
     const userData = useSelector(state => state.getUserData.userData);
+    // const username = useSelector(state => state.getUserData.username);
     const userRepos = useSelector(state => state.getUserRepos.userRepos);
 
     const dispatch = useDispatch();
 
-    if (!Object.entries(userData).length) {
+    if (!Object.entries(userData).length && !error) {
         dispatch(getUserData.get(props.match.params.userLogin));
     }
+
+    // if (error) {
+    //     props.history.push(`/${username}`);
+    // }
 
     useEffect(() => {
         if (userData.login) {
@@ -32,7 +39,7 @@ const Result = props => {
     }, [userData]);
 
     return (
-        <div className="Result">
+        <div className="Result w-96vh-700">
             <div className="d-flex row flex-wrap align-items-center justify-content-space-evenly">
                 <div>
                     <SearchHeading />
@@ -43,7 +50,7 @@ const Result = props => {
             </div>
             {Object.entries(userData).length ? (
                 <div className="pt-3 d-flex row flex-wrap align-items-center justify-content-space-evenly">
-                    <div className="col flex-wrap align-self-baseline">
+                    <div className="col flex-wrap align-self-baseline pl-3-1366">
                         <img src={userData.avatar_url} alt="Avatar" className="d-flex user-picture" />
                         <span className="user-name d-flex pt-3">{userData.name}</span>
                         <Details className="pt-3" height="25px">{userData.login}</Details>
@@ -74,7 +81,7 @@ const Result = props => {
                             ) : null}
                         </div>
                     </div>
-                    <div className="w-60 pt-10-700">
+                    <div className="w-60 pt-10-700 pl-3-1366">
                         <div className="d-flex col">
                             {userRepos.length ? (
                                 userRepos.map(repo => (
@@ -96,10 +103,12 @@ const Result = props => {
                     </div>
                 </div>
             ) : (
-                null
+                <div className="d-flex justify-content-center align-items-center not-found-container">
+                    <span className="repo-name d-flex">User not found :(</span>
+                </div>
             )}
         </div>
     );
 };
 
-export default Result;
+export default withRouter(Result);
