@@ -21,6 +21,7 @@ You can search a user by it's name and then see his/hers repos on a list.
 * [React-Router-DOM](https://www.npmjs.com/package/react-router-dom) - DOM bindings for React Router
 * [axios](https://github.com/axios/axios) - HTTP client
 * [GitHub API](https://developer.github.com/v3/) - Used to query the information
+* [Firebase](https://firebase.google.com/) -  Development platform used to host the application
 
 ## Inspirations and resources
 
