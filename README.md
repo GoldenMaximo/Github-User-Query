@@ -30,6 +30,10 @@ You can search a user by it's name and then see his/hers repos on a list.
 * [Concrete favicon](https://concrete.com.br) - Page icon
 * [Puff loading spinner](http://samherbert.net/svg-loaders/) - The loading spinner used
 
+## DEMO
+
+![](public/demo.gif)
+
 ## Installation
 
 *Make sure to have [Git](http://git-scm.com/) and [Node.js](http://nodejs.org/) 10.0.0 (or higher) installed.*
