@@ -13,6 +13,7 @@ You can search a user by it's name and then see his/hers repos on a list.
 ## Built With
 
 * [React.js](https://reactjs.org/) - JS Framework used
+* [React Hooks](https://reactjs.org/docs/hooks-intro.html) - Cleaner/more scalable React API
 * [Create React App](https://create-react-app.dev/) - React bootstrapper
 * [Redux](https://redux.js.org/) - State container
 * [React-Redux](https://github.com/reduxjs/react-redux) - React bindings for Redux
