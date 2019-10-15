@@ -35,6 +35,11 @@ const Result = props => {
 
     const starCount = useMemo(() => userRepos.reduce((a, b) => a + b.stargazers_count, 0), [userRepos]);
 
+    // const mappedUserReposByStargazes = useMemo(() => {
+    //     return userRepos.map((a, b) => a + b.stargazers_count, 0), [userRepos]
+    // }
+    // );
+
     return (
         <div className="Result w-96vh-700">
             <div className="d-flex row flex-wrap align-items-center justify-content-space-evenly">
@@ -89,7 +94,7 @@ const Result = props => {
                     <div className="w-60 pt-10-700 pl-3-1366">
                         <div className="d-flex col">
                             {userRepos.length ? (
-                                userRepos.map(repo => (
+                                userRepos.sort((a, b) => b.stargazers_count - a.stargazers_count).map(repo => (
                                     <div key={repo.id} className="d-flex row pb-2 pb-10-700">
                                         <div className="d-flex col">
                                             <a target="_blank" rel="noopener noreferrer" href={repo.html_url}>
