@@ -35,14 +35,9 @@ const Result = props => {
 
     const starCount = useMemo(() => userRepos.reduce((a, b) => a + b.stargazers_count, 0), [userRepos]);
 
-    // const mappedUserReposByStargazes = useMemo(() => {
-    //     return userRepos.map((a, b) => a + b.stargazers_count, 0), [userRepos]
-    // }
-    // );
-
     return (
         <div className="Result w-96vh-700">
-            <div className="d-flex row flex-wrap align-items-center justify-content-space-evenly">
+            <div className="d-flex row flex-wrap align-items-center justify-content-space-evenly pt-1">
                 <div>
                     <SearchHeading className="cursor-pointer-on-hover" href="/" />
                 </div>
