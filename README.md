@@ -1,4 +1,4 @@
-# Concrete Front-End Challenge
+# Github User Query
 > A client-side application that queries the GitHub API and shows the repositories of a particular user.
 
 Intended to showcase my Front-end skills.
