@@ -52,7 +52,7 @@ const SearchBar = props => {
                 onChange={onChangeTextHandler}
                 value={username}
             />
-            <button type="submit" className="d-flex justify-content-center">
+            <button type="submit" className="d-flex justify-content-center align-items-center">
                 {loading ? (
                     <LoadingSpinner />
                 ) : (
